@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1w7dcumi6ye8"]
+
+[ext_resource type="Script" uid="uid://eytkfrueirdn" path="res://Scripts/Head.gd" id="1_aqdy8"]
+[ext_resource type="Texture2D" uid="uid://c6wdj01lfkati" path="res://Sprites/735b20f8-b656-4804-b897-d4a5ea02c6ef.png" id="1_xpmq8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqdy8"]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5nohv"]
+radius = 54.0093
+
+[node name="Head" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_aqdy8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(0.143555, 0.132487)
+texture = ExtResource("1_xpmq8")
+
+[node name="TetoHead" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -54)
+shape = SubResource("CircleShape2D_aqdy8")
+
+[node name="TetoBody" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 19)
+shape = SubResource("CircleShape2D_5nohv")
