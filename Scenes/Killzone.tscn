@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cimuk7fued3wx"]
+
+[ext_resource type="Script" uid="uid://ter1mtkad3dw" path="res://killzone.gd" id="1_dviv5"]
+
+[node name="Killzone" type="Area2D"]
+script = ExtResource("1_dviv5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

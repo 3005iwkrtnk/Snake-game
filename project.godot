@@ -15,6 +15,15 @@ run/main_scene="res://Scenes/snake_game.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Autoloads/Global.gd"
+
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=448
+
 [input]
 
 ui_left={
