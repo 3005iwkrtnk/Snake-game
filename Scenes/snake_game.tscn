@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c1w7dcumi6ye8" path="res://Scenes/Head.tscn" id="2_68efj"]
 [ext_resource type="Script" uid="uid://d21iciyw6ncvl" path="res://Scripts/Bounds.gd" id="4_jcscg"]
 [ext_resource type="PackedScene" uid="uid://cimuk7fued3wx" path="res://Scenes/Killzone.tscn" id="5_yhhbi"]
-[ext_resource type="Script" uid="uid://cpl6b0ikg4ojw" path="res://Scenes/spawner.gd" id="6_7feqo"]
+[ext_resource type="Script" uid="uid://cpl6b0ikg4ojw" path="res://Scripts/spawner.gd" id="6_7feqo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jcscg"]
 texture = ExtResource("2_8aylr")

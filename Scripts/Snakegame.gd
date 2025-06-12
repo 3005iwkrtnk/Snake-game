@@ -43,7 +43,9 @@ func update_snake():
 	var new_pos:Vector2 = Head.position + move_dir * Global.Grid_size
 	new_pos = bounds.wrap_vector(new_pos)
 	Head.move_to(new_pos)
-
+	
+	for i in range(1,snake_parts.size(),1):
+		snake_parts[i].move_to(snake_parts[i-1].last_position)
 
 func _on_food_eaten():
 	# Spawn more food
@@ -54,7 +56,7 @@ func _on_food_eaten():
 	
 	
 func _on_tail_added(tail:Tail):
-	snake_parts.push_back(Tail)
+	snake_parts.push_back(tail)
 	
 	
 	

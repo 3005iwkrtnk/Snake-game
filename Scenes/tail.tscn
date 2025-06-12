@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://do7rk2wxtq254"]
 
-[ext_resource type="Script" uid="uid://2s5gvahgbfg0" path="res://Scenes/tail.gd" id="1_jbcg2"]
+[ext_resource type="Script" uid="uid://2s5gvahgbfg0" path="res://Scripts/tailscript.gd" id="1_jbcg2"]
 [ext_resource type="Texture2D" uid="uid://pemdm7pm1wo1" path="res://Sprites/apple.png" id="2_2skvh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mf3a1"]
