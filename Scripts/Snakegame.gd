@@ -5,18 +5,19 @@ extends Node2D
 @onready var spawner: Spawner = $Spawner as Spawner
 @onready var bounds: Bounds = $Bounds
 
-
-
+const gameover_scene:PackedScene = preload("res://Scenes/Menus/game_over.tscn")
+var gameover_menu: GameOver
 
 var move_time = 1000
 var last_move = 0
 var move_dir:Vector2 = Vector2.LEFT
 var speed = 5000
 var snake_parts:Array[Snake_part] = []
-
+var score:int = 0
 
 func _ready() -> void:
 	Head.food_eaten.connect(_on_food_eaten)
+	Head.collided_with_tail.connect(_on_tail_collided)
 	spawner.tail_added.connect(_on_tail_added)
 	spawner.spawn_food()
 	snake_parts.push_back(Head)
@@ -53,11 +54,18 @@ func _on_food_eaten():
 	print('food eaten')
 	# add tail
 	spawner.call_deferred('spawn_tail' ,snake_parts[snake_parts.size()-1].last_position)
+	# update score
+	score += 1
 	
 	
 func _on_tail_added(tail:Tail):
 	snake_parts.push_back(tail)
 	
 	
-	
-	
+func _on_tail_collided():
+	if not gameover_menu:
+		gameover_menu = gameover_scene.instantiate() as GameOver
+		add_child(gameover_menu)
+		gameover_menu.set_score(score)
+		get_tree().paused = true
+		
