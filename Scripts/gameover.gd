@@ -1,5 +1,6 @@
 class_name GameOver extends CanvasLayer
 
+const game_over_quit:PackedScene = preload("res://Scenes/Menus/start_screen.tscn")
 
 @onready var score: Label = %ScoreLabel
 @onready var high_score: Label = %HighScoreLabel
@@ -17,4 +18,4 @@ func _on_restart_pressed() -> void:
 	
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_packed(game_over_quit)
