@@ -10,10 +10,12 @@ const gameplay_scene:PackedScene = preload("res://Scenes/snake_game.tscn")
 func _ready() -> void:
 	var high_score:int = 0
 	score_label.text = 'High score: ' + str(high_score)
-	
+
 
 func _on_start_button_pressed() -> void:
+	get_tree().paused = false
 	get_tree().change_scene_to_packed(gameplay_scene)
+
 
 
 func _on_quit_button_pressed() -> void:

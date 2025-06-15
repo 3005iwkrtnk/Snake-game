@@ -5,9 +5,8 @@ extends Node2D
 @onready var spawner: Spawner = $Spawner as Spawner
 @onready var bounds: Bounds = $Bounds
 
-const game_over_quit:PackedScene = preload("res://Scenes/Menus/start_screen.tscn")
-const gameover_scene:PackedScene = preload("res://Scenes/Menus/game_over.tscn")
 
+const gameover_scene:PackedScene = preload("res://Scenes/Menus/game_over.tscn")
 var gameover_menu: GameOver
 
 var move_time = 1000

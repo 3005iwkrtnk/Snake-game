@@ -69,7 +69,7 @@ text = "Restart"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "Quit"
+text = "Return to menu"
 
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/Quit" to="." method="_on_quit_pressed"]
